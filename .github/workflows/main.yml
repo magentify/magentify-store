@@ -65,6 +65,8 @@ jobs:
                     zip --symlinks -q -r build.zip .
 
             -   name: Install PHP dev dependencies
+                env:
+                    APP_ENV: dev
                 run: composer install --verbose --prefer-dist --no-progress --no-interaction --optimize-autoloader --no-suggest
 
             -   name: Run Static test and Code validation
