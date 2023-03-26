@@ -34,7 +34,11 @@
         "options": []
       },
       {
-        "action": "vendor/bin/ecs check --fix",
+        "action": "vendor/bin/ecs check",
+        "options": []
+      },
+      {
+        "action": "bin/console lint:twig",
         "options": []
       }
     ]
