@@ -32,6 +32,10 @@
       {
         "action": "vendor/bin/psalm",
         "options": []
+      },
+      {
+        "action": "vendor/bin/ecs check --fix",
+        "options": []
       }
     ]
   },
