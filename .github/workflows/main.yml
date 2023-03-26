@@ -1,0 +1,87 @@
+on: push
+env:
+    PHP_VERSION: 8.2
+    NODE_VERSION: 18
+
+jobs:
+    build:
+        name: "Build, Test and Deploy"
+        runs-on: ubuntu-latest
+        timeout-minutes: 5
+        if: github.ref_type == 'branch' && github.ref_name == 'master'
+
+        env:
+            APP_ENV: prod
+            APP_DEBUG: 0
+
+        steps:
+            -   uses: actions/checkout@v3
+
+            -   name: Get Composer cache directory
+                id: composer-cache
+                run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+            -   name: Cache Composer
+                uses: actions/cache@v3
+                with:
+                    path: ${{ steps.composer-cache.outputs.dir }}
+                    key: ${{ runner.os }}-php-${{ env.PHP_VERSION }}-composer-${{ hashFiles('**/composer.json **/composer.lock') }}
+                    restore-keys: |
+                        ${{ runner.os }}-php-${{ env.PHP_VERSION }}-composer-
+
+            -   name: Get Yarn cache directory
+                id: yarn-cache
+                run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+
+            -   name: Cache Yarn
+                uses: actions/cache@v3
+                with:
+                    path: ${{ steps.yarn-cache.outputs.dir }}
+                    key: ${{ runner.os }}-node-${{ env.NODE_VERSION }}-yarn-${{ hashFiles('**/package.json **/yarn.lock') }}
+                    restore-keys: |
+                        ${{ runner.os }}-node-${{ env.NODE_VERSION }}-yarn-
+
+            -   name: Setup PHP
+                uses: shivammathur/setup-php@v2
+                with:
+                    php-version: "${{ env.PHP_VERSION }}"
+                    tools: composer:v2, composer-require-checker, symfony
+                    coverage: none
+
+            -   name: Setup Node
+                uses: actions/setup-node@v3
+                with:
+                    node-version: "${{ env.NODE_VERSION }}"
+
+            -   name: Install PHP dependencies without developer dependencies
+                run: composer install --verbose --prefer-dist --no-progress --no-interaction --optimize-autoloader --no-suggest --no-dev
+
+            -   name: Install and Build Yarn dependencies
+                run: yarn install --no-progress --non-interactive && yarn build
+
+            -   name: Create build artifact archive
+                run: |
+                    rm -rf .git node_modules var
+                    zip --symlinks -q -r build.zip .
+
+            -   name: Install PHP dev dependencies
+                run: composer install --verbose --prefer-dist --no-progress --no-interaction --optimize-autoloader --no-suggest
+
+            -   name: Run Static test and Code validation
+                run: |
+                    composer validate --ansi --no-check-publish
+                    composer-require-checker check
+                    symfony security:check
+                    vendor/bin/ecs check
+                    vendor/bin/phpstan
+                    vendor/bin/psalm
+                    vendor/bin/rector
+                    bin/console lint:twig
+
+#            -   name: Deploy
+#                uses: deployphp/action@v1
+#                with:
+#                    private-key: ${{ secrets.DEPLOY_SSH_PRIVATE_KEY }}
+#                    known-hosts: ${{ secrets.KNOWN_HOSTS }}
+#                    deployer-version: 7.2.1
+#                    dep: deploy -vvv
