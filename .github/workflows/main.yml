@@ -11,7 +11,6 @@ jobs:
         if: github.ref_type == 'branch' && github.ref_name == 'master'
 
         env:
-            APP_ENV: prod
             APP_DEBUG: 0
 
         steps:
@@ -54,6 +53,8 @@ jobs:
                     node-version: "${{ env.NODE_VERSION }}"
 
             -   name: Install PHP dependencies without developer dependencies
+                env:
+                    APP_ENV: prod
                 run: composer install --verbose --prefer-dist --no-progress --no-interaction --optimize-autoloader --no-suggest --no-dev
 
             -   name: Install and Build Yarn dependencies
@@ -71,7 +72,6 @@ jobs:
 
             -   name: Run Static test and Code validation
                 run: |
-                    ls -la var/cache/dev
                     composer validate --ansi --no-check-publish
                     composer-require-checker check
                     symfony security:check
