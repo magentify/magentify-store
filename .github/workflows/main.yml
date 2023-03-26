@@ -71,6 +71,7 @@ jobs:
 
             -   name: Run Static test and Code validation
                 run: |
+                    ls -la var/cache/dev
                     composer validate --ansi --no-check-publish
                     composer-require-checker check
                     symfony security:check
