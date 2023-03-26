@@ -5,7 +5,7 @@
 -   [Git](https://git-scm.com/downloads)
 -   [Composer v2](https://getcomposer.org/download/)
 -   [Symfony Cli](https://symfony.com/download)
--   [Yarn](https://yarnpkg.com/cli/install)
+-   [Yarn 1](https://yarnpkg.com/cli/install)
 -   Node 18, you can use [NVM](https://github.com/nvm-sh/nvm)
 -   PHP 8.2
 
