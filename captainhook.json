@@ -1,0 +1,57 @@
+{
+  "commit-msg": {
+    "enabled": true,
+    "actions": [
+      {
+        "action": "\\Webgriffe\\CaptainHook\\PreventCommitMessageWithDiff"
+      },
+      {
+        "action": "\\Webgriffe\\CaptainHook\\PreventCommitCaseSensitiveSameFilename"
+      }
+    ]
+  },
+  "pre-push": {
+    "enabled": true,
+    "actions": [
+      {
+        "action": "composer validate --no-check-publish",
+        "options": []
+      },
+      {
+        "action": "symfony security:check",
+        "options": []
+      },
+      {
+        "action": "vendor/bin/rector",
+        "options": []
+      },
+      {
+        "action": "vendor/bin/phpstan analyse",
+        "options": []
+      },
+      {
+        "action": "vendor/bin/psalm",
+        "options": []
+      }
+    ]
+  },
+  "pre-commit": {
+    "enabled": true,
+    "actions": [
+      {
+        "action": "\\CaptainHook\\App\\Hook\\PHP\\Action\\Linting",
+        "options": []
+      },
+      {
+        "action": "vendor/bin/ecs check {$STAGED_FILES|of-type:php|separated-by: } --fix",
+        "options": [],
+        "conditions": [
+          {
+            "exec": "\\CaptainHook\\App\\Hook\\Condition\\FileStaged\\OfType",
+            "args": ["php"]
+          }
+        ]
+      }
+    ]
+  }
+}
