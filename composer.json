@@ -13,6 +13,10 @@
         "symfony/framework-bundle": "6.2.*",
         "symfony/runtime": "6.2.*",
         "symfony/yaml": "6.2.*"
+    }
+    ,
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
     },
     "config": {
         "allow-plugins": {
