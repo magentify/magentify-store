@@ -18,8 +18,10 @@
     "require-dev": {
         "phpstan/phpstan": "^1.10",
         "phpstan/phpstan-symfony": "^1.2",
+        "psalm/plugin-symfony": "^5.0",
         "roave/security-advisories": "dev-latest",
-        "symplify/easy-coding-standard": "^11.3"
+        "symplify/easy-coding-standard": "^11.3",
+        "vimeo/psalm": "^5.8"
     },
     "config": {
         "allow-plugins": {
