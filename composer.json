@@ -16,9 +16,11 @@
     }
     ,
     "require-dev": {
+        "phpstan/extension-installer": "^1.2",
         "phpstan/phpstan": "^1.10",
         "phpstan/phpstan-symfony": "^1.2",
         "psalm/plugin-symfony": "^5.0",
+        "rector/rector": "^0.15.23",
         "roave/security-advisories": "dev-latest",
         "symplify/easy-coding-standard": "^11.3",
         "vimeo/psalm": "^5.8"
@@ -27,7 +29,8 @@
         "allow-plugins": {
             "php-http/discovery": true,
             "symfony/flex": true,
-            "symfony/runtime": true
+            "symfony/runtime": true,
+            "phpstan/extension-installer": true
         },
         "sort-packages": true
     },
