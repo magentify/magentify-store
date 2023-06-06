@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+    <section class="py-20 bg-color-1 min-h-screen">
+        <div class="container mx-auto px-4">
+            <div class="flex -md:flex-col -md:text-center">
+                <div class="w-1/2 -md:w-full">
+                    <p class="font-serif text-4xl text-color-3 leading-tight mb-4 -md:text-3xl">Magentify</p>
+                    <h1 class="font-serif text-7xl text-color-3 !leading-tight mb-4 -md:text-5xl">The site with the beast Magento 2 Plugins</h1>
+                    <div class="-md:py-8">
+                        <a href="#" class="xt-button py-3 px-6 text-md font-medium font-serif leading-snug tracking-wider uppercase text-color-3 bg-white transition hover:bg-color-3 active:bg-color-3 on:bg-color-3 hover:text-white active:text-white on:text-white">Take a Look</a>
+                    </div>
+                </div>
+                <div class="w-1/2 -md:w-full">
+                    <div class="xt-media-container pb-[130%]">
+                        <img class="xt-media object-cover" src="https://websitedemos.net/beer-launch-04/wp-content/uploads/sites/795/2021/04/hero-beer-bottles-3.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="container mx-auto px-4 -lg:content-none -lg:w-full -lg:px-0">
+            <h2 class="text-5xl font-serif text-color-3 leading-tight text-center pb-20">Discover Our Plugins</h2>
+            {% for i in 0..4 %}
+                <a href="{{ path('app_product_page', {'slug': i}) }}" class="flex -md:flex-col {{ i%2 == 0 ? '' : 'flex-row-reverse' }}">
+                    <div class="w-1/2 -md:w-full">
+                        <div class="p-12">
+                            <div class="xt-media-container pb-[131%]">
+                                <img class="xt-media object-cover" src="https://websitedemos.net/beer-launch-04/wp-content/uploads/sites/795/2021/04/beer-light-1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-1/2 bg-color-5 flex items-center justify-center -md:w-full relative">
+                        <img class="absolute w-[50%] top-[16%] right-[20%]" style="transform: translate(50%, -50%) rotate(45deg);" src="/money_back_guarantee.png" alt="">
+                        <div class="p-16">
+                            <h6 class="text-xl font-serif text-color-3 leading-tight">Magento 2</h6>
+                            <h3 class="text-5xl font-serif text-color-1 leading-tight my-4">X-Pay</h3>
+                            <p class="xt-p text-color-4">This extension integrates the X-Pay payment gateway by CartaSì. The same platform was also used by KeyClient's QuiPago now acquired by CartaSì.</p>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

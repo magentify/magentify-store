@@ -4,8 +4,55 @@ controllers:
         namespace: App\Controller
     type: attribute
 
-app_homepage:
+app_redirect_to_homepage:
     path: /
+    controller: Symfony\Bundle\FrameworkBundle\Controller\RedirectController
+    defaults:
+        route: app_homepage
+        permanent: true
+
+app_homepage:
+    path: /{_locale}/
+    requirements:
+        _locale: '%app.supported_locales%'
     defaults:
         _controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController
         template: /Home/index.html.twig
+
+app_product_page:
+    path:
+        en: /{_locale}/product/{slug}
+        it: /{_locale}/prodotto/{slug}
+    requirements:
+        _locale: '%app.supported_locales%'
+    defaults:
+        _controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+        template: /Product/index.html.twig
+
+app_sales_conditions_page:
+    path:
+        en: /{_locale}/sales-conditions
+        it: /{_locale}/condizioni-di-vendita
+    requirements:
+        _locale: '%app.supported_locales%'
+    defaults:
+        _controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+        template: /SalesConditions/index.html.twig
+
+app_support_page:
+    path:
+        en: /{_locale}/support
+        it: /{_locale}/supporto
+    requirements:
+        _locale: '%app.supported_locales%'
+    defaults:
+        _controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+        template: /Support/index.html.twig
+
+app_privacy_policy_page:
+    path: /{_locale}/privacy-policy
+    requirements:
+        _locale: '%app.supported_locales%'
+    defaults:
+        _controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController
+        template: /PrivacyPolicy/index.html.twig
