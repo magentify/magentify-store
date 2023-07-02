@@ -11,24 +11,6 @@ app_redirect_to_homepage:
         route: app_homepage
         permanent: true
 
-app_homepage:
-    path: /{_locale}/
-    requirements:
-        _locale: '%app.supported_locales%'
-    defaults:
-        _controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController
-        template: /Home/index.html.twig
-
-app_product_page:
-    path:
-        en: /{_locale}/product/{slug}
-        it: /{_locale}/prodotto/{slug}
-    requirements:
-        _locale: '%app.supported_locales%'
-    defaults:
-        _controller: Symfony\Bundle\FrameworkBundle\Controller\TemplateController
-        template: /Product/index.html.twig
-
 app_sales_conditions_page:
     path:
         en: /{_locale}/sales-conditions

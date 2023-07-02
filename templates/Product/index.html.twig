@@ -1,71 +1,53 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}{{ title(product.name) }}{% endblock %}
+{% block description %}{{ product.shortDescription }}{% endblock %}
+
 {% block main %}
-    <div class="demo--products-gallery-v1">
-        <!-- For seo purpose add product metadata https://developers.google.com/search/docs/data-types/product -->
-        <div class="container pt-3 md:py-12 lg:py-20 xl:py-28">
+    <div class="products-gallery">
+        <div class="container md:py-8 lg:py-12 xl:py-14">
             <div class="xt-row md:xt-row-8 lg:xt-row-12 items-stretch">
                 <div class="w-full md:w-5/12 lg:w-6/12 xl:w-7/12">
                     <div class="relative">
                         <div class="product-gallery overflow-y-auto overflow-x-hidden xt-overflow-sub h-96 xt-container-remove md:!m-0 md:!h-auto md:!overflow-hidden">
                             <div class="xt-list flex-col">
-                                <div class="product-image w-full"
-                                >
-                                    <a href="#product-image-overlay-1" id="product-image-1" title="Expand image 1">
-                                        <div class="xt-media-container bg-gray-200 overflow-hidden"
-                                             data-xt-overlay-element
-                                        >
-                                            <img class="xt-media relative"
-                                                 src="https://source.unsplash.com/164_6wVEHfI"
-                                                 loading="lazy"
-                                                 alt=""
-                                            />
-                                            <div class="xt-media-mask absolute inset-0 pointer-events-none bg-white -translate-y-full"></div>
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="product-image w-full">
-                                    <a href="#product-image-overlay-2" id="product-image-2" title="Expand image 2">
-                                        <div class="xt-media-container bg-gray-200 overflow-hidden"
-                                             data-xt-overlay-element>
-                                            <img class="xt-media relative"
-                                                 src="https://source.unsplash.com/j7zu2kpTnwY"
-                                                 loading="lazy"
-                                                 alt=""
-                                            />
-                                            <div class="xt-media-mask absolute inset-0 pointer-events-none bg-white -translate-y-full"></div>
-                                        </div>
-                                    </a>
-                                </div>
+                                {% for image in product.gallery %}
+                                    <div class="product-image w-full">
+                                        <a href="#product-image-overlay-{{ loop.index }}" id="product-image-{{ loop.index }}">
+                                            <div class="xt-media-container bg-gray-200 overflow-hidden"
+                                                 data-xt-overlay-element
+                                            >
+                                                <img class="xt-media relative"
+                                                     src="{{ image }}"
+                                                     loading="lazy"
+                                                     alt=""
+                                                />
+                                                <div class="xt-media-mask absolute inset-0 pointer-events-none bg-white -translate-y-full"></div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                {% endfor %}
                             </div>
 
                             <div class="absolute h-full bottom-0 right-0 md:hidden">
                                 <div class="xt-list flex-col h-full justify-center">
-                                    <a href="#product-image-1"
-                                       class="py-1.5 px-2 flex items-center justify-center group"
-                                       title="Go to image 1"
-                                    >
-                                        <div class="bg-black rounded-full border-2 border-transparent group-on:bg-transparent group-on:border-black w-[7px] h-[7px] group-on:w-[9px] group-on:h-[9px] transition-all"></div>
-                                    </a>
-
-                                    <a href="#product-image-2"
-                                       class="py-1.5 px-2 flex items-center justify-center group"
-                                       title="Go to image 2"
-                                       data-xt-group="red">
-                                        <div class="bg-black rounded-full border-2 border-transparent group-on:bg-transparent group-on:border-black w-[7px] h-[7px] group-on:w-[9px] group-on:h-[9px] transition-all"></div>
-                                    </a>
-
+                                    {% for image in product.gallery %}
+                                        <a href="#product-image-{{ loop.index }}"
+                                           class="py-1.5 px-2 flex items-center justify-center group"
+                                        >
+                                            <div class="bg-black rounded-full border-2 border-transparent group-on:bg-transparent group-on:border-black w-[7px] h-[7px] group-on:w-[9px] group-on:h-[9px] transition-all"></div>
+                                        </a>
+                                    {% endfor %}
                                 </div>
                             </div>
 
                             <div aria-label="Modal" class="xt-overlay group" id="overlay--product-images">
                                 <div class="xt-backdrop z-below bg-gray-900 opacity-0 transition-opacity duration-300 ease-in-out-cubic group-in:delay-200 group-in:ease-out-quint group-in:opacity-25"></div>
                                 <div class="xt-overlay-container p-0">
-                                    <button
-                                            type="button"
+                                    <button type="button"
                                             class="xt-button xt-dismiss fixed z-above top-0 right-0 p-3 text-2xl text-white bg-primary-500 transition hover:text-white hover:bg-primary-600 active:text-white active:bg-primary-700 on:text-white on:bg-primary-600 opacity-0 transition-opacity duration-300 ease-in-out-cubic group-in:delay-200 group-in:ease-out-quint group-in:opacity-100"
-                                            aria-label="Close">
+                                            aria-label="Close"
+                                    >
                                         <svg xmlns="http://www.w3.org/2000/svg" class="xt-icon " width="24"
                                              height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -77,27 +59,17 @@
                                         <div
                                                 class="xt-card min-h-screen items-center justify-center shadow-xl text-gray-900 xt-links-default bg-white transition opacity-0 group-in:opacity-100">
                                             <div class="w-full opacity-0 translate-y-6 scale-95 group-in:transition group-in:opacity-100 group-in:translate-y-0 group-in:scale-100 group-out:transition group-out:translate-y-0 group-out:scale-100">
-                                                <div
-                                                        class="xt-media-container bg-gray-200 overflow-hidden"
-                                                >
-                                                    <img
+                                                {% for image in product.gallery %}
+                                                    <div class="xt-media-container bg-gray-200 overflow-hidden">
+                                                        <img
                                                             class="xt-media relative"
-                                                            id="product-image-overlay-1"
-                                                            src="https://source.unsplash.com/164_6wVEHfI"
+                                                            id="product-image-overlay-{{ loop.index }}"
+                                                            src="{{ image }}"
                                                             loading="lazy"
-                                                            alt=""/>
-                                                </div>
-
-                                                <div
-                                                        class="xt-media-container bg-gray-200 overflow-hidden">
-                                                    <img
-                                                            class="xt-media relative"
-                                                            id="product-image-overlay-2"
-                                                            src="https://source.unsplash.com/j7zu2kpTnwY"
-                                                            loading="lazy"
-                                                            alt=""/>
-                                                </div>
-
+                                                            alt=""
+                                                        />
+                                                    </div>
+                                                {% endfor %}
                                             </div>
                                         </div>
                                     </div>
@@ -114,42 +86,65 @@
                          data-xt-stickyflow-filler>
                     </div>
                     <div class="py-12 md:sticky" data-xt-stickyflow-el>
-                        <h1 class="xt-h2">Product Title</h1>
+                        <h1 class="text-xl font-serif text-color-3 leading-tight">{{ 'app.magento_2'|trans }}</h1>
+                        <h2 class="text-5xl font-serif text-color-1 leading-tight my-4">{{ product.name }}</h2>
 
-                        <div class="xt-card my-6 text-gray-900 xt-links-default bg-gray-100">
+                        <div class="xt-card my-6 bg-color-5 xt-links-default">
                             <div class="p-6 sm:p-8 text-sm">
                                 <div class="out:pointer-events-none font-bold text-2xl leading-none mb-6">
-                                    229,00&nbsp;€
+                                    {{ (product.price/100)|format_currency('EUR') }}
                                 </div>
-                                <a href="https://buy.stripe.com/test_dR6dT8gVU1Te9tSfYY"
-                                   class="xt-button w-full py-3 px-4 text-base rounded-md font-medium leading-snug tracking-wider uppercase text-white bg-primary-500 transition hover:text-white hover:bg-primary-600 active:text-white active:bg-primary-700 on:text-white on:bg-primary-600">
-                                    Buy
+                                <a href="{{ product.stripeLink }}"
+                                   class="xt-button w-full py-3 px-4 text-base rounded-md font-medium font-serif leading-snug tracking-wider uppercase text-white bg-color-1 transition hover:text-white hover:bg-color-2 active:text-white active:bg-color-2 on:text-white on:bg-color-2">
+                                    {{ 'app.product.buy'|trans }}
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="border-b border-gray-100 mb-6" data-xt-toggle="{ collapseHeight: 'targets', queue: false, duration: 500 }" data-xt-toggle-init>
+                            <div>
+                                <a role="button" class="xt-button justify-start text-left py-4 w-full border-t border-gray-100 text-xl tracking-wide group" data-xt-toggle-element>
+                                    {% include 'Common/Icon/_refreshCw.html.twig' with {'class': 'xt-icon w-[1.2rem] h-auto mr-3'} only %}
+                                    <span>{{ 'app.product.update_title'|trans }}</span>
+                                    {% include 'Common/Icon/_chevronRight.html.twig' with {'class': 'xt-icon text-[9px] absolute right-0 group-on:rotate-90'} only %}
+                                </a>
+                                <div class="off:hidden out:pointer-events-none overflow-hidden transition-all" data-xt-toggle-target>
+                                    <div class="pt-2 pb-8 leading-relaxed">{{ 'app.product.update_content'|trans }}</div>
+                                </div>
+                            </div>
+                            <div>
+                                <a role="button" class="xt-button justify-start text-left py-4 w-full border-t border-gray-100 text-xl tracking-wide group" data-xt-toggle-element>
+                                    {% include 'Common/Icon/_thumbsUp.html.twig' with {'class': 'xt-icon w-[1.2rem] h-auto mr-3'} only %}
+                                    <span>{{ 'app.product.money_back_guarantee_title'|trans }}</span>
+                                    {% include 'Common/Icon/_chevronRight.html.twig' with {'class': 'xt-icon text-[9px] absolute right-0 group-on:rotate-90'} only %}
+                                </a>
+                                <div class="off:hidden out:pointer-events-none overflow-hidden transition-all" data-xt-toggle-target>
+                                    <div class="pt-2 pb-8 leading-relaxed">
+                                        {{ 'app.product.money_back_guarantee_content'|trans }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <a role="button" class="xt-button justify-start text-left py-4 w-full border-t border-gray-100 text-xl tracking-wide group" data-xt-toggle-element>
+                                    {% include 'Common/Icon/_key.html.twig' with {'class': 'xt-icon w-[1.2rem] h-auto mr-3'} only %}
+                                    <span>{{ 'app.product.compatibility_title'|trans }}</span>
+                                    {% include 'Common/Icon/_chevronRight.html.twig' with {'class': 'xt-icon text-[9px] absolute right-0 group-on:rotate-90'} only %}
+                                </a>
+                                <div class="off:hidden out:pointer-events-none overflow-hidden transition-all" data-xt-toggle-target>
+                                    <div class="pt-2 pb-8 leading-relaxed">{{ 'app.product.compatibility_content'|trans }}</div>
+                                </div>
+                            </div>
+                            <div>
+                                <a href="{{ product.userGuideLink }}" target="_blank" class="xt-button justify-start text-left py-4 w-full border-t border-gray-100 text-xl tracking-wide">
+                                    {% include 'Common/Icon/_fileText.html.twig' with {'class': 'xt-icon w-[1.2rem] h-auto mr-3'} only %}
+                                    <span>{{ 'app.product.guide'|trans }}</span>
+                                    {% include 'Common/Icon/_chevronRight.html.twig' with {'class': 'xt-icon text-[9px] absolute right-0 group-on:rotate-90'} only %}
                                 </a>
                             </div>
                         </div>
 
                         <div class="leading-loose text-black text-opacity-75">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec mauris est. Etiam
-                                egestas efficitur
-                                semper. Donec imperdiet eget justo at pellentesque. Proin a ultricies orci. Vivamus
-                                ut scelerisque
-                                lorem. Suspendisse lobortis consequat magna ut ultricies. Duis consequat vitae justo
-                                nec commodo.
-                                Vestibulum id eros eu sapien aliquam feugiat. Aenean id accumsan orci, nec elementum
-                                ex.
-                            </p>
-                            <p>
-                                Proin eget lectus pharetra, pretium nunc sed, pulvinar nibh. Quisque ac tellus ac mi
-                                posuere
-                                tristique. Ut dictum elit sed facilisis rutrum. In sagittis ac ante at blandit. Sed
-                                at felis
-                                fermentum, semper lorem sed, sagittis lacus. Cras justo massa, molestie sit amet
-                                lacinia a, luctus ac
-                                velit. Cras tristique, urna in hendrerit laoreet, nisi sem interdum urna, rutrum
-                                elementum nisl turpis
-                                id est.
-                            </p>
+                            {{ product.description|raw }}
                         </div>
                     </div>
                 </div>

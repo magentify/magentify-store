@@ -1,35 +1,41 @@
 <footer class="bg-color-1 text-color-3">
     <div class="container max-w-4xl mx-auto py-20">
         <div class="w-full mx-auto flex flex-wrap">
-            <div class="flex w-full md:w-1/2 ">
-                <div class="px-8">
-                    <h3 class="font-bold font-serif">Chi Siamo</h3>
-                    <p class="py-4">
-                        Magentify è specializzata nello sviluppo di plugin Magento 2. Con oltre 6 anni di esperienza nel
-                        settore, siamo leader nel fornire plugin di alta qualità per migliorare l'esperienza d'acquisto
-                        del tuo e-commerce.
-                    </p>
+            <div class="flex w-full md:w-3/6 ">
+                <div class="px-8 mx-auto">
+                    <h3 class="font-bold font-serif">{{ 'app.about_us.title'|trans }}</h3>
+                    <p class="py-4">{{ 'app.about_us.description'|trans }}</p>
                 </div>
             </div>
 
-            <div class="flex w-full md:w-1/2">
-                <div class="px-8">
-                    <h3 class="font-bold font-serif">Informazioni</h3>
+            <div class="flex w-1/2 md:w-2/6">
+                <div class="px-8 mx-auto">
+                    <h3 class="font-bold font-serif">{{ 'app.info'|trans }}</h3>
                     <ul class="list-reset py-4">
-                        <li><a class="hover:text-color-4" href="{{ path('app_sales_conditions_page') }}">Condizioni di vendita</a></li>
-                        <li><a class="hover:text-color-4" href="{{ path('app_support_page') }}">Supporto</a></li>
-                        <li><a class="hover:text-color-4" href="{{ path('app_privacy_policy_page') }}">Informazioni sulla privacy</a></li>
+                        <li><a class="hover:text-color-4" href="{{ path('app_support_page') }}">{{ 'app.support.title'|trans }}</a></li>
+                        <li><a class="hover:text-color-4" href="{{ path('app_sales_conditions_page') }}">{{ 'app.sales_condition.title'|trans }}</a></li>
+                        <li><a class="hover:text-color-4" href="{{ path('app_privacy_policy_page') }}">{{ 'app.privacy_policy.title'|trans }}</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex w-1/2 md:w-1/6">
+                <div class="px-8 mx-auto">
+                    <h3 class="font-bold font-serif">{{ 'app.locale'|trans }}</h3>
+                    <ul class="list-reset py-4">
+                        {% for locale in enabled_locales %}
+                            <li>
+                                <a class="hover:text-color-4" href="{{ path('app_homepage', {'_locale': locale}) }}">{{ locale|language_name(locale) }}</a>
+                            </li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>
         </div>
         <div class="container mx-auto px-4">
             <div class="pt-8 text-center">
-                <p class="font-serif">Copyright ©
-                    <script>document.write(new Date().getFullYear())</script>
-                    Magentify
-                </p>
-                <p>Tutti i diritti riservati</p>
+                <p class="font-serif">{{ 'app.copyright'|trans|raw }}</p>
+                <p>{{ 'app.legal_info'|trans }}</p>
             </div>
         </div>
     </div>

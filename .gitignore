@@ -14,3 +14,10 @@
 /public/build/
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
+
+###> workbox-webpack-plugin ###
+/public/service-worker.js*
+/public/workbox-*.js*
+###< workbox-webpack-plugin ###
+
+/docker-compose.override.yml

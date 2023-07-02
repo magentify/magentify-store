@@ -1,0 +1,71 @@
+app:
+  brand:
+    name: Magentify
+  about_us:
+    title: About Us
+    description: Magentify specializes in developing Magento 2 plugins. With over 6 years of experience in the industry, we are leaders in providing high-quality plugins to enhance the shopping experience of your e-commerce store.
+  info: Information
+  support:
+    title: Support
+    body: |
+      <h2>Have you purchased one of our extensions and have any technical issues or questions?</h2>
+      <p>Don't worry, you can contact us by writing an email to our technical support address <a href="mailto:support@magentify.it" target="_blank"><strong>support@magentify.it</strong></a>. Please remember to provide the following information:
+        <ul>
+          <li>The name of the purchased module,</li>
+          <li>The transaction ID,</li>
+          <li>Whenever possible, always attach the logs related to the module,</li>
+          <li>Screenshots of the configuration section and any error messages.</li>
+        </ul>
+      </p>
+      <p>The <strong>logs for our modules</strong> are located in the <strong>var/log</strong> folder of your Magento installation and have a name that clearly identifies them. In some cases, the logs may not be present if logging is disabled on your Magento installation. In this case, we kindly ask you to enable logging. The option can be found in <strong>System > Configuration > Advanced > Developer > Log Settings > Enabled</strong>, and after reproducing the issue, please send us the corresponding log file.</p><p>Furthermore, if possible, please attach the <strong>PHP error logs</strong> from the machine where you encountered the problem. Each system may be configured differently, but often this file can be found within the Apache logs (e.g., <strong>/var/log/apache2/error.log</strong>).</p>
+      <p><strong>Lastly, remember that the more precise and accurate your support request is, the faster we can resolve the issue.</strong></p>
+  sales_condition:
+    title: Sales Conditions
+    body: |
+      <h2>Magento Extension Software License Agreement</h2>
+      <p>Last updated on 24/06/2023</p>
+      <h3>1. General Introduction</h3>
+      <p>This document describes the software usage license agreements signed by a Customer upon purchasing a Magento Extension developed by the Owner of the store.magentify.it. Any violation of this agreement by the Customer automatically nullifies their rights to use the software or any parts thereof.</p>
+      <h3>2. License</h3>
+      <p>By purchasing a Magento Extension from the Store Owner, a Customer obtains a license to use it as long as they comply with the terms and conditions described in this agreement.</p>
+      <p>Each license can be used on an unlimited number of Magento test installations and on <strong>one production installation</strong>. A license can be used in a multi-domain context as long as the various domains point to the same Magento production installation.</p>
+      <p>The purchase of a license does not grant the Customer any ownership rights, either to the original software or any derivative thereof.</p>
+      <h3>3. Installation</h3>
+      <p>By purchasing a Magento Extension, the Customer agrees to take responsibility for its installation. The Store Owner cannot be held liable if the installation fails due to causes outside the module or depends on the specific configuration of the Customer's Magento platform. In case of installation issues, the Store Owner may choose to provide free assistance or suggest purchasing a paid installation service. However, <strong>the Store Owner guarantees a full refund if the Customer is dissatisfied, provided that the refund request is formally made within 10 days of purchase</strong>. Once a refund is issued for an Extension, the corresponding license is revoked, and the Customer loses all rights to use it in both testing and production environments.</p>
+      <h3>4. Support</h3>
+      <p><strong>For each purchased Extension, the Store Owner guarantees free updates and bug fixes for a period of three months from the purchase date</strong>. Free support does not include resolving issues related to installation or compatibility with third-party Extensions or customizations. Free support cannot be guaranteed if the Extension's source code has been modified. To obtain free support, the Customer must request it by providing evidence of the purchase, such as the transaction ID and the email used during the purchase process. The Store Owner reserves the right to ignore any support requests that do not comply with the described guidelines. At the end of the free support period, the Store Owner may offer a paid support service upon explicit request from the Customer.</p>
+      <h3>5. Limitations of Liability</h3>
+      <p>Except as otherwise provided by local laws, under no circumstances shall the Store Owner or any affiliated companies be liable for any damages, including loss of profit, data, or connectivity, arising from the use or inability to use this software.</p>
+      <h3>6. Copyright</h3>
+      <p>The Customer is not authorized to copy, sell, rent, or sublicense the software or any parts thereof without prior written authorization from the Store Owner.</p>
+      <p>The Customer is not authorized to modify the source code of the software without prior written authorization from the Store Owner.</p>
+      <p>Any violation of the described terms and conditions automatically grants the Store Owner the right to suspend the license, while informing the Customer of the resolution procedures for the ongoing issues. If the Customer disregards the Store Owner's instructions or persists in violating the license agreements, the Store Owner has the right to permanently revoke the license from the Customer.</p>
+      <p>The source code and all files provided with an Extension are and remain the exclusive property of the Store Owner, subject to the regulations provided by Italian legislation regarding copyright.</p>
+      <p>In the event of legal disputes, the Store Owner designates the exclusive competent jurisdiction as the Court of Reggio Emilia (Italy).</p>
+      <h3>7. Modifications</h3>
+      <p>The Store Owner reserves the right to unilaterally modify the terms and conditions described here, committing to communicate such changes to the Customers in the case of more restrictive or detrimental modifications.</p>
+  privacy_policy:
+    title: Privacy Information
+    body: |
+      <h2>Information pursuant to Art. 13 of the Privacy Code Legislative Decree No. 196 of 30.06.2003</h2>
+      <p>Legislative Decree No. 196 of June 30, 2003, "Personal Data Protection Code," regulates the confidentiality of personal data and imposes a series of obligations on those who process information relating to other subjects. The mentioned regulation defines data processing as any operation or set of operations, even carried out without the aid of electronic tools, concerning the collection, recording, organization, storage, consultation, processing, modification, selection, extraction, comparison, use, interconnection, blocking, communication, dissemination, deletion, and destruction of data, even if not recorded in a database. With regard to the positions listed below in which you can identify yourself in relation to the Store Owner: contracts for the supply of material goods, immaterial goods, and services; commercial and collaborative relationships of any kind; we inform you that the data relating to your company and the individuals appointed by you to operate on your behalf and order are essential to carry out the normal operations inherent in the aforementioned relationships, and therefore the provision of such data is mandatory. Any refusal to provide the data implies the impossibility of carrying out the previously mentioned activities. The data provided by you may also include sensitive information. Regarding the data collected via the internet, the Store Owner uses IP address tracking technologies on their website to track visits to their site, specifically: IP Addresses: The IP addresses of all visitors accessing the Store Owner's site are collected. The collected data is used for the technical and administrative management of the Store Owner's operations, the diagnosis of any technical problems, and the prevention of intrusion and abuse of the service. The processing of the data involves the identification of certain individuals who bear specific obligations and responsibilities. In this regard, the following information is communicated: The Data Controller is Giacomo Moscardini, residing in the registered office. Other individuals may be appointed as Data Processors by the Data Controller: the complete and up-to-date list can be requested from the Store Owner, who undertakes to provide it electronically. Data processors may include individuals (employees and/or collaborators) who operate under the direct authority of the Data Controller, in addition to administrative, financial, and commercial management, as appointed by the Data Controller. The data in question will be processed: on paper and electronic media of any kind. By authorized individuals, constantly identified, suitably trained, and informed of the constraints imposed by current laws. With the commitment to promptly update the data, eliminating outdated, unnecessary, or irrelevant information. With the commitment to adopt the organizational and security measures provided by law to guarantee the confidentiality of the data subject and to prevent unauthorized access by third parties or unauthorized individuals. To enable a comprehensive understanding of the matter, it is recalled that Articles 7, 8, and 9 of the Personal Data Protection Code expressly protect the rights of the Data Subjects. Hereinafter, Article 7, Rights of the Data Subject (Right of access to personal data and other rights) is reported: The data subject has the right to obtain confirmation as to whether or not personal data concerning them exist, even if not yet recorded, and their communication in an intelligible form. The data subject has the right to obtain the following information: a) the origin of the personal data; b) the purposes and methods of the processing; c) the logic applied in case of processing carried out with the aid of electronic tools; d) the identification details of the data controller, data processors, and the designated representative as per Article 5, paragraph 2; e) the subjects or categories of subjects to whom the personal data may be communicated or who may become aware of it as designated representative(s) in the territory of the State, data processors, or authorized personnel. The data subject has the right to obtain: a) the updating, rectification, or, when interested, integration of the data; b) the erasure, anonymization, or blocking of data processed unlawfully, including data that does not need to be retained for the purposes for which it was collected or subsequently processed; c) the certification that the operations as per points a) and b) have been notified, including their content, to those to whom the data was communicated or disclosed, except when this proves impossible or involves a disproportionate effort compared to the right being protected. The data subject has the right to object, in whole or in part: a) on legitimate grounds, to the processing of personal data concerning them, even if relevant to the purpose of the collection; b) to the processing of personal data concerning them for the purpose of sending advertising or direct sales material or for carrying out market research or commercial communication.</p>
+  locale: Language
+  copyright: Copyright © <script>document.write(new Date().getFullYear())</script> Magentify
+  legal_info: Giacomo Moscardini - VAT ID 03012200352 - REA RE 332498
+  magento_2: Magento 2
+  home:
+    meta_title: Magentify | The website with the best plugins for Magento 2
+    meta_description:
+    title: The website with the best plugins for Magento 2
+    cta: Take a look
+    plugins_section: Discover our plugins
+    money_back_guarantee: money-back guarantee
+  product:
+    buy: Buy
+    update_title: Guaranteed Updates
+    update_content: You will have guaranteed updates for 6 months
+    money_back_guarantee_title: Money-Back Guarantee
+    money_back_guarantee_content: You will have 10 days to try the module and get a refund if you are not satisfied
+    compatibility_title: Compatibility
+    compatibility_content: The module has been tested with Magento 2.4.6 Community Edition
+    guide: Installation and Usage Guide

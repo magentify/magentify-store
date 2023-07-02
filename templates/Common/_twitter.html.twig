@@ -1,0 +1,5 @@
+<meta name="twitter:card" content="summary">
+<meta property="twitter:url" content="{{ url(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}">
+<meta name="twitter:title" content="{% block title %}{{ 'app.home.meta_title'|trans }}{% endblock %}">
+<meta name="twitter:description" content="{% block description %}{{ 'app.about_us.description'|trans }}{% endblock %}">
+<meta name="twitter:image" content="{{ asset('build/assets/images/logo/icon-192x192.png') }}">

@@ -1,0 +1,74 @@
+app:
+  brand:
+    name: Magentify
+  about_us:
+    title: Chi Siamo
+    description: Magentify è specializzata nello sviluppo di plugin Magento 2. Con oltre 6 anni di esperienza nel
+      settore, siamo leader nel fornire plugin di alta qualità per migliorare l'esperienza d'acquisto
+      del tuo e-commerce.
+  info: Informazioni
+  support:
+    title: Supporto
+    body: |
+      <h2>Hai acquistato una nostra estensione e hai qualche problema o domanda di natura tecnica?</h2>
+      <p>Non preoccuparti, puoi contattarci scrivendo una email al nostro indirizzo di supporto tecnico <a href="mailto:support@magentify.it" target="_blank"><strong>support@magentify.it</strong></a>. Non dimenticare di comunicarci:
+        <ul>
+          <li>Il nome del modulo acquistato,</li>
+          <li>L'identificativo della transazione,</li>
+          <li>Quando possibile, allega sempre i log relativi al modulo in oggetto,</li>
+          <li>Gli screenshot della sezione di configurazione e dell'eventuale messaggio di errore.</li>
+        </ul>
+      </p>
+      <p>I <strong>log dei nostri moduli</strong> si trovano nella cartella <strong>var/log</strong> dell'installazione Magento e hanno un nome che li identifica chiaramente. In alcuni casi i log potrebbero non essere presenti in quanto il logging è stato disattivato sulla installazione Magento. In questo caso ti chiediamo la cortesia di attivare il logging. L'opzione si trova in <strong>Sistema > Configurazione > Avanzate > Sviluppa > Impostazioni log > Abilitato</strong> e, a seguito di un nuovo tentativo che scatena il problema, di inviarci il relativo file.</p><p>Inoltre, se ne hai la possibilità, allega alla richiesta di supporto i <strong>log degli errori PHP</strong> della macchina su cui hai riscontrato il problema. Ogni sistema può essere configurato diversamente ma, molte volte, questo file si trova all'interno dei log di Apache (ad esempio <strong>/var/log/apache2/error.log</strong>).</p>
+      <p><strong>Infine, non dimenticare che quanto più è precisa e accurata la richiesta di supporto tanto più sarà veloce la risoluzione del problema.</strong></p>
+  sales_condition:
+    title: Condizioni di Vendita
+    body: |
+      <h2>Accordo di Licenza Software per Estensioni Magento</h2>
+      <p>Ultimo aggiornamento il 24/06/2023</p>
+      <h3>1. Introduzione generale</h3>
+      <p>Il presente documento descrive gli accordi di licenza di utilizzo del software sottoscritti da un Cliente all'atto dell'acquisto di una Estensione Magento sviluppata  dal Titolare del Negozio store.magentify.it. La violazione, da parte del Cliente, del presente accordo fa decadere automaticamente ogni suo diritto all'utilizzo del software o parti di esso.</p>
+      <h3>2. Licenza</h3>
+      <p>Con l'acquisto di una Estensione Magento del Titolare del Negozio, un Cliente ne ottiene la licenza di utilizzo finché si verifica il rispetto ai termini e alle condizioni descritti nel presente accordo</p>
+      <p>Ogni licenza può essere utilizzata in un numero illimitato di installazioni di test di Magento e su <strong>una sola installazione di produzione</strong>. Una licenza può essere utilizzata in un contesto multi dominio purché i vari domini puntino alla stessa installazione Magento di produzione.</p>
+      <p>L'acquisto di una licenza non dà alcun diritto di proprietà al Cliente né relativamente al software originale né ad alcuna derivazione di esso.</p>
+      <h3>3. Installazione</h3>
+      <p>Acquistando una Estensione Magento, il Cliente accetta di assumersi l'onere della relativa installazione. Il Titolare del Negozio non può essere ritenuto responsabile se l'installazione non va a buon fine perché le cause possono essere esterne al modulo e dipendere dalla specifica configurazione della piattaforma Magento del Cliente. In caso di problemi di installazione, il Titolare del Negozio può arbitrariamente decidere se fornire assistenza gratuita o suggerire l'acquisto di un servizio di installazione a pagamento. Ad ogni modo, <strong>il Titolare del Negozio garantisce il rimborso totale in caso di insoddisfazione del Cliente purché la richiesta di rimborso avvenga formalmente entro 10 giorni dall'acquisto</strong>. Una volta effettuato il rimborso per una Estensione, la relativa licenza è revocata e il Cliente perde ogni diritto di utilizzarla sia in ambiente di test sia di produzione.</p>
+      <h3>4. Supporto</h3>
+      <p><strong>Per ogni Estensione acquistata il Titolare del Negozio garantisce aggiornamenti e correzioni gratuite per un periodo di tre mesi dall'acquisto</strong>. Il supporto gratuito non include la risoluzione di problemi legati all'installazione o alla compatibilità con Estensioni o personalizzazioni di terze parti. Il supporto gratuito non può essere garantito nel caso in cui il codice sorgente dell'Estensione sia stato modificato. Per ottenere il supporto gratuito, il Cliente deve richiederlo dando evidenza dell'acquisto, ad esempio fornendo l'ID della transazione e l'Email utilizzata durante il processo di acquisto. Il Titolare del Negozio si riserva il diritto d'ignorare ogni richiesta di supporto che non rispetti le direttive descritte. Al termine del periodo di supporto gratuito, il Titolare del Negozio può offrire un servizio di supporto a pagamento su esplicita richiesta del Cliente.</p>
+      <h3>5. Limitazioni di responsabilità</h3>
+      <p>Ad eccezione di quanto stabilito dalle leggi locali, in nessun caso il Titolare del Negozio o altre società ad essa collegate potranno essere ritenute responsabili per qualsiasi tipo di danno, incluso perdita di profitto, di dati o di collegamento, derivante dall'utilizzo o dall'impossibilità di utilizzare questo software.</p>
+      <h3>6. Copyright</h3>
+      <p>Il Cliente non è autorizzato a copiare, vendere, affittare o sotto-licenziare il software o parti di esso senza una preventiva autorizzazione scritta da parte del Titolare del Negozio.</p>
+      <p>Il Cliente non è autorizzato a modificare il codice sorgente del software senza una preventiva autorizzazione scritta da parte del Titolare del Negozio.</p>
+      <p>Qualsiasi violazione dei termini e delle condizioni descritte conferiscono automaticamente a il Titolare del Negozio il diritto di sospendere la licenza, avendo cura di informare il Cliente delle modalità per la risoluzione delle problematica in corso. Nel caso il Cliente ignori le indicazioni del Titolare del Negozio o si ostini a reiterare la violazione degli accordi di licenza, il Titolare del Negozio ha il diritto di revocare permanentemente la licenza al Cliente.</p>
+      <p>Il codice sorgente e tutti i file forniti con una Estensione sono e rimangono di proprietà esclusiva del Titolare del Negozio e sottostanno alle regolamentazioni previste dalla legislazione italiana in merito ai diritti di autore.</p>
+      <p>In caso di controversie legali, il Titolare del Negozio elegge come esclusivo foro competente il Tribunale di Reggio Emilia (Italia).</p>
+      <h3>7. Modifiche</h3>
+      <p>il Titolare del Negozio si riserva il diritto di modificare unilateralmente i termini e le condizioni qui descritte impegnandosi a darne comunicazione ai Clienti in caso di modifiche più restrittive o peggiorative.</p>
+  privacy_policy:
+    title: Informazioni sulla Privacy
+    body: |
+      <h2>Informativa ai sensi dell'art. 13 T.U. Privacy Dlgs. N. 196 del 30.06.2003</h2>
+      <p>Il D.Lgs. 30 giugno 2003, n. 196, “Codice in materia di protezione dei dati personali”, regola la riservatezza dei dati personali e impone una serie di obblighi in capo a chi tratta informazioni riferite ad altri soggetti. La norma in questione intende come trattamento dei dati qualunque operazione o complesso di operazioni, effettuati anche senza l'ausilio di strumenti elettronici, concernenti la raccolta, la registrazione, l'organizzazione, la conservazione, la consultazione, l'elaborazione, la modifica, la selezione, l'estrazione, il raffronto, l'utilizzo, l'interconnessione, il blocco, la comunicazione, la diffusione, la cancellazione e la distruzione di dati, anche se non registrati in una banca di dati. In relazione alle posizioni elencate di seguito in cui potete identificarvi nel rapporto con il Titolare del Negozio: contratti per la fornitura di beni materiali, immateriali e servizi; rapporti commerciali e di collaborazione di qualsiasi tipo; vi informiamo che i dati relativi alla vostra società e alle persone fisiche da voi incaricate a operare per vostro ordine e conto, sono indispensabili per dar corso alle normali operazioni tipiche inerenti i suddetti rapporti e pertanto il conferimento dei dati stessi si configura con natura di obbligatorietà. L'eventuale rifiuto al conferimento dei dati implica l'impossibilità a dar corso a quanto elencato precedentemente. I dati da voi conferiti potrebbero anche contenerne d'idonei a renderli classificabili come sensibili. In merito ai dati raccolti via internet, il Titolare del Negozio utilizza sul proprio sito le tecnologie di tracciamento degli indirizzi IP a scopo di tracciare le visite effettuate al proprio sito, in particolare: Indirizzi IP: sono raccolti gli indirizzi IP di tutti i visitatori che accedono al sito del Titolare del Negozio. I dati raccolti sono utilizzati per la gestione delle operazioni tecnico amministrative del Titolare del Negozio, la diagnosi di eventuali problemi tecnici e la prevenzione d'intrusione e abuso del servizio. Il trattamento dei dati prevede l'identificazione di alcuni soggetti su cui gravano specifici oneri e responsabilità. Nella fattispecie si comunica quanto segue: Il Titolare del trattamento è Giacomo Moscardini domiciliato per la carica presso la sede legale. Eventuali altri soggetti possono essere nominati Responsabili dal Titolare: l'elenco aggiornato completo può essere richiesto a il Titolare del Negozio che si impegna a fornirlo in modalità telematica. Incaricati del trattamento possono essere le persone (dipendenti e/o collaboratori) che operano sotto la diretta autorità del Titolare, oltre che alla gestione amministrativa, finanziaria e commerciale, nominati dal Titolare. I dati in questione saranno trattati: Su supporti cartacei ed elettronici di qualsiasi tipo. Da soggetti autorizzati, costantemente identificati, opportunamente istruiti e resi edotti dei vincoli imposti dalle leggi vigenti. Con l'impegno di tenere prontamente aggiornati i dati, eliminando quelli obsoleti, non necessari o non pertinenti. Con l'impegno di adottare le misure organizzative e di sicurezza previste dalla legge, atte a garantire la riservatezza del soggetto interessato e a evitare l'indebito accesso di soggetti terzi o di persone non autorizzate. Per consentire la più completa cognizione della problematica, ricordiamo che gli art. 7, 8, 9 del T.U. tutelano espressamente i diritti degli Interessati; riportiamo qui di seguito l'art.7 Diritti dell'Interessato (Diritto di accesso ai dati personali ed altri diritti): L'interessato ha diritto di ottenere la conferma dell'esistenza o meno di dati personali che lo riguardano, anche se non ancora registrati, e la loro comunicazione in forma intelligibile. L'interessato ha diritto di ottenere l'indicazione: a) dell'origine dei dati personali; b) delle finalità e modalità del trattamento; c) della logica applicata in caso di trattamento effettuato con l'ausilio di strumenti elettronici; d) degli estremi identificativi del titolare, dei responsabili e del rappresentante designato ai sensi dell'articolo 5, comma 2; e) dei soggetti o delle categorie di soggetti ai quali i dati personali possono essere comunicati o che possono venirne a conoscenza in qualità di rappresentante designato nel territorio dello Stato, di responsabili o incaricati. L'interessato ha diritto di ottenere: a) l'aggiornamento, la rettificazione ovvero, quando vi ha interesse, l'integrazione dei dati; b) la cancellazione, la trasformazione in forma anonima o il blocco dei dati trattati in violazione di legge, compresi quelli di cui non e' necessaria la conservazione in relazione agli scopi per i quali i dati sono stati raccolti o successivamente trattati; c) l'attestazione che le operazioni di cui alle lettere a) e b) sono state portate a conoscenza, anche per quanto riguarda il loro contenuto, di coloro ai quali i dati sono stati comunicati o diffusi, eccettuato il caso in cui tale adempimento si rivela impossibile o comporta un impiego di mezzi manifestamente sproporzionato rispetto al diritto tutelato. L'interessato ha diritto di opporsi, in tutto o in parte: a) per motivi legittimi al trattamento dei dati personali che lo riguardano, ancorché pertinenti allo scopo della raccolta; b) al trattamento di dati personali che lo riguardano a fini di invio di materiale pubblicitario o di vendita diretta o per il compimento di ricerche di mercato o di comunicazione commerciale.</p>
+  locale: Lingua
+  copyright: Copyright © <script>document.write(new Date().getFullYear())</script> Magentify
+  legal_info: Giacomo Moscardini - P.IVA 03012200352 - REA RE 332498
+  magento_2: Magento 2
+  home:
+    meta_title: Magentify | Il sito con i migliori plugin per Magento 2
+    meta_description:
+    title: Il sito con i migliori plugin per Magento 2
+    cta: Dai un'occhiata
+    plugins_section: Scopri i nostri plugin
+    money_back_guarantee: soddisfatti o rimborsati
+  product:
+    buy: acquista
+    update_title: Aggiornamenti Garantiti
+    update_content: Avrai gli aggiornamenti garantiti per 6 mesi
+    money_back_guarantee_title: Soddisfatti o rimborsati
+    money_back_guarantee_content: Avrai 10 giorni per provare il modulo e per riavere indietro i soldi se non ti soddisfa
+    compatibility_title: Compatibilità
+    compatibility_content: Il modulo è stato testato con la versione Community di Magento 2.4.6
+    guide: Guida all'installazione e all'utilizzo
+

@@ -212,7 +212,7 @@ const mountImages = ({ref}) => {
 /* mount */
 
 Xt.mount({
-    matches: '.demo--products-gallery-v1',
+    matches: '.products-gallery',
     mount: ({ref}) => {
         const unmountScrollto = mountScrollto({ref})
         const unmountImages = mountImages({ref})

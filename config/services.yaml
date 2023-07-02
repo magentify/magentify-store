@@ -7,12 +7,15 @@ parameters:
     enabled_locales: ['en', 'it']
     default-locale: 'en'
     app.supported_locales: 'en|it'
+    app.database.full_path: '%kernel.project_dir%/var/data/products.json'
 
 services:
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+        bind:
+            $databaseFullPath: '%app.database.full_path%'
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name

@@ -1,0 +1,6 @@
+<meta property="og:site_name" content="{{ 'app.brand.name'|trans }}">
+<meta property="og:title" content="{% block title %}{{ 'app.home.meta_title'|trans }}{% endblock %}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ url(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}">
+<meta property="og:description" content="{% block description %}{{ 'app.about_us.description'|trans }}{% endblock %}">
+<meta property="og:image" content="{{ asset('build/assets/images/logo/icon-192x192.png') }}">

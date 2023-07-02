@@ -9,11 +9,11 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                "color-1": 'rgb(239, 77, 72)',
-                "color-2": 'rgb(217, 7, 0)',
-                "color-3": 'rgb(43, 22, 27)',
-                "color-4": 'rgb(69, 62, 62)',
-                "color-5": 'rgb(247, 243, 245)'
+                "color-1": '#EF4D48',
+                "color-2": '#D90700',
+                "color-3": '#2B161B',
+                "color-4": '#453E3E',
+                "color-5": '#F7F3F5'
             },
             fontFamily: {
                 sans: ['Cairo', ...defaultTheme.fontFamily.sans],
@@ -28,6 +28,18 @@ module.exports = {
                         color: theme('colors.color-3')
                     },
                 }),
+            },
+        },
+        container: {
+            center: true,
+            fluid: 'none',
+            padding: {
+                DEFAULT: '1rem',
+                sm: '1.25rem',
+                md: '1.5rem',
+                lg: '2rem',
+                xl: '2.5rem',
+                '2xl': '5vw',
             },
         },
     }

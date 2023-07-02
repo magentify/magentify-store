@@ -1,5 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block main %}
+{% block title %}{{ title('app.privacy_policy.title'|trans) }}{% endblock %}
 
+{% block main %}
+    <div class="container !max-w-7xl py-14 -lg:py-12 -md:py-8">
+        <h1 class="font-serif text-7xl text-color-3 !leading-tight mb-4 -md:text-5xl">{{ 'app.privacy_policy.title'|trans }}</h1>
+        {{ 'app.privacy_policy.body'|trans|raw }}
+    </div>
 {% endblock %}
