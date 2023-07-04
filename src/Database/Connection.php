@@ -8,7 +8,7 @@ use JsonException;
 
 class Connection implements ConnectionInterface
 {
-    private array $data;
+    private readonly array $data;
 
     /**
      * @throws JsonException
@@ -21,6 +21,7 @@ class Connection implements ConnectionInterface
     public function getProducts(string $locale): array
     {
         return array_map(static fn ($product) => new Product([
+            'sku' => $product['sku'],
             'name' => $product['name'][$locale],
             'slug' => $product['slug'],
             'shortDescription' => $product['shortDescription'][$locale],

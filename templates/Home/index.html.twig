@@ -1,6 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block main %}
+    {% include 'Common/_website_schema_org.html.twig' %}
+    {% include 'Common/_webpage_schema_org.html.twig' with {'name': 'app.home.meta_title'|trans} %}
+    {% include 'Common/_breadcrumbs_schema_org.html.twig' with {'breadcrumbs': [{'name': 'app.home.type'|trans, 'url': url(app.request.attributes.get('_route'), app.request.attributes.get('_route_params'))}]} %}
     <section class="py-20 bg-color-1 min-h-screen">
         <div class="container mx-auto px-4">
             <div class="flex -md:flex-col -md:text-center">

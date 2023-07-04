@@ -3,17 +3,15 @@
 namespace App\Controller;
 
 use App\Database\ConnectionInterface;
+use App\ValueObject\ProductInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class ProductPageController extends AbstractController
 {
-    private ConnectionInterface $connection;
-
-    public function __construct(ConnectionInterface $connection)
+    public function __construct(private readonly ConnectionInterface $connection)
     {
-        $this->connection = $connection;
     }
 
     #[Route(
@@ -27,7 +25,7 @@ class ProductPageController extends AbstractController
     public function index(string $_locale, string $slug): Response
     {
         $product = $this->connection->getProductBySlug($slug, $_locale);
-        if ($product === null) {
+        if (!$product instanceof ProductInterface) {
             throw $this->createNotFoundException();
         }
 

@@ -4,6 +4,8 @@ namespace App\ValueObject;
 
 interface ProductInterface
 {
+    public function getSku(): string;
+
     public function getName(): string;
 
     public function getSlug(): string;

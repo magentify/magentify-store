@@ -1,0 +1,23 @@
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "{{ product.name }}",
+        "description": "{{ product.shortDescription }}",
+        "sku": "{{ product.sku }}",
+        "brand": {
+            "@type": "Brand",
+                "name": "{{ 'app.brand.name'|trans }}"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "{{ product.price/100 }}",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+                "@type": "Organization",
+                "name": "{{ 'app.brand.name'|trans }}"
+            }
+        }
+    }
+</script>

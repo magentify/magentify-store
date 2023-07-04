@@ -4,6 +4,9 @@
 {% block description %}{{ product.shortDescription }}{% endblock %}
 
 {% block main %}
+    {% include 'Product/_product_schema_org.html.twig' %}
+    {% include 'Common/_webpage_schema_org.html.twig' with {'name': product.name} %}
+    {% include 'Common/_breadcrumbs_schema_org.html.twig' with {'breadcrumbs': [{'name': 'app.home.type'|trans, 'url': url('app_homepage')}, {'name': product.name, 'url': url(app.request.attributes.get('_route'), app.request.attributes.get('_route_params'))}]} %}
     <div class="products-gallery">
         <div class="container md:py-8 lg:py-12 xl:py-14">
             <div class="xt-row md:xt-row-8 lg:xt-row-12 items-stretch">

@@ -3,6 +3,8 @@
 {% block title %}{{ title('app.privacy_policy.title'|trans) }}{% endblock %}
 
 {% block main %}
+    {% include 'Common/_webpage_schema_org.html.twig' with {'name': 'app.privacy_policy.title'|trans} %}
+    {% include 'Common/_breadcrumbs_schema_org.html.twig' with {'breadcrumbs': [{'name': 'app.home.type'|trans, 'url': url('app_homepage')}, {'name': 'app.privacy_policy.title'|trans, 'url': url(app.request.attributes.get('_route'), app.request.attributes.get('_route_params'))}]} %}
     <div class="container !max-w-7xl py-14 -lg:py-12 -md:py-8">
         <h1 class="font-serif text-7xl text-color-3 !leading-tight mb-4 -md:text-5xl">{{ 'app.privacy_policy.title'|trans }}</h1>
         {{ 'app.privacy_policy.body'|trans|raw }}

@@ -62,6 +62,7 @@ app:
     cta: Dai un'occhiata
     plugins_section: Scopri i nostri plugin
     money_back_guarantee: soddisfatti o rimborsati
+    type: Home
   product:
     buy: acquista
     update_title: Aggiornamenti Garantiti

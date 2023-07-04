@@ -4,26 +4,29 @@ namespace App\ValueObject;
 
 class Product implements ProductInterface
 {
-    private string $name;
+    private readonly string $sku;
 
-    private string $slug;
+    private readonly string $name;
 
-    private string $shortDescription;
+    private readonly string $slug;
 
-    private string $image;
+    private readonly string $shortDescription;
 
-    private array $gallery;
+    private readonly string $image;
 
-    private int $price;
+    private readonly array $gallery;
 
-    private string $stripeLink;
+    private readonly int $price;
 
-    private string $userGuideLink;
+    private readonly string $stripeLink;
 
-    private string $description;
+    private readonly string $userGuideLink;
+
+    private readonly string $description;
 
     public function __construct(array $product)
     {
+        $this->sku = $product['sku'];
         $this->name = $product['name'];
         $this->slug = $product['slug'];
         $this->shortDescription = $product['shortDescription'];
@@ -33,6 +36,11 @@ class Product implements ProductInterface
         $this->stripeLink = $product['stripeLink'];
         $this->userGuideLink = $product['userGuideLink'];
         $this->description = $product['description'];
+    }
+
+    public function getSku(): string
+    {
+        return $this->sku;
     }
 
     public function getName(): string

@@ -9,11 +9,8 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HomePageController extends AbstractController
 {
-    private ConnectionInterface $connection;
-
-    public function __construct(ConnectionInterface $connection)
+    public function __construct(private readonly ConnectionInterface $connection)
     {
-        $this->connection = $connection;
     }
 
     #[Route('/{_locale}/', name: 'app_homepage', requirements: [

@@ -60,6 +60,7 @@ app:
     cta: Take a look
     plugins_section: Discover our plugins
     money_back_guarantee: money-back guarantee
+    type: Home
   product:
     buy: Buy
     update_title: Guaranteed Updates
