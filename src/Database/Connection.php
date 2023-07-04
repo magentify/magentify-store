@@ -2,20 +2,33 @@
 
 namespace App\Database;
 
+use App\Database\Exception\DatabaseParsingException;
 use App\ValueObject\Product;
 use App\ValueObject\ProductInterface;
 use JsonException;
 
-class Connection implements ConnectionInterface
+readonly class Connection implements ConnectionInterface
 {
-    private readonly array $data;
+    private array $data;
 
     /**
-     * @throws JsonException
+     * @throws DatabaseParsingException
      */
     public function __construct(string $databaseFullPath)
     {
-        $this->data = json_decode(file_get_contents($databaseFullPath), true, 512, JSON_THROW_ON_ERROR);
+        $content = file_get_contents($databaseFullPath);
+        if (!is_string($content)) {
+            throw new DatabaseParsingException();
+        }
+        try {
+            $data = json_decode($content, true, 512, JSON_THROW_ON_ERROR);
+        } catch (JsonException $e) {
+            throw new DatabaseParsingException($e->getMessage());
+        }
+        if (!is_array($data)) {
+            throw new DatabaseParsingException();
+        }
+        $this->data = $data;
     }
 
     public function getProducts(string $locale): array

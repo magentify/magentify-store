@@ -2,27 +2,30 @@
 
 namespace App\ValueObject;
 
-class Product implements ProductInterface
+readonly class Product implements ProductInterface
 {
-    private readonly string $sku;
+    private string $sku;
 
-    private readonly string $name;
+    private string $name;
 
-    private readonly string $slug;
+    private string $slug;
 
-    private readonly string $shortDescription;
+    private string $shortDescription;
 
-    private readonly string $image;
+    private string $image;
 
-    private readonly array $gallery;
+    /**
+     * @var string[]
+     */
+    private array $gallery;
 
-    private readonly int $price;
+    private int $price;
 
-    private readonly string $stripeLink;
+    private string $stripeLink;
 
-    private readonly string $userGuideLink;
+    private string $userGuideLink;
 
-    private readonly string $description;
+    private string $description;
 
     public function __construct(array $product)
     {
