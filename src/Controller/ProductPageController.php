@@ -10,8 +10,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ProductPageController extends AbstractController
 {
-    public function __construct(private readonly ConnectionInterface $connection)
-    {
+    public function __construct(
+        private readonly ConnectionInterface $connection
+    ) {
     }
 
     #[Route(
@@ -25,7 +26,7 @@ class ProductPageController extends AbstractController
     public function index(string $_locale, string $slug): Response
     {
         $product = $this->connection->getProductBySlug($slug, $_locale);
-        if (!$product instanceof ProductInterface) {
+        if (! $product instanceof ProductInterface) {
             throw $this->createNotFoundException();
         }
 

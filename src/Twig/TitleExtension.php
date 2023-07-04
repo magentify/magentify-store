@@ -10,8 +10,9 @@ use Twig\TwigFunction;
 
 final class TitleExtension extends AbstractExtension
 {
-    public function __construct(private readonly TranslatorInterface $translator)
-    {
+    public function __construct(
+        private readonly TranslatorInterface $translator
+    ) {
     }
 
     public function getFunctions(): array
@@ -19,7 +20,7 @@ final class TitleExtension extends AbstractExtension
         return [
             new TwigFunction(
                 'title',
-                fn(?string $pageName = null): string => $this->getTitle($pageName)
+                fn (?string $pageName = null): string => $this->getTitle($pageName)
             ),
         ];
     }
