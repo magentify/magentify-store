@@ -21,3 +21,4 @@ yarn-error.log
 ###< workbox-webpack-plugin ###
 
 /docker-compose.override.yml
+/deployer/host.yml
