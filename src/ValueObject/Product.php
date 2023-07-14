@@ -14,9 +14,7 @@ readonly class Product implements ProductInterface
 
     private string $image;
 
-    /**
-     * @var string[]
-     */
+    /** @var string[] */
     private array $gallery;
 
     private int $price;

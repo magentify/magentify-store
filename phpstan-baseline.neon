@@ -1,0 +1,21 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Access to an undefined property Stripe\\\\StripeObject\\:\\:\\$object\\.$#"
+			count: 4
+			path: src/Controller/PurchaseController.php
+
+		-
+			message: "#^Cannot call method offsetGet\\(\\) on Stripe\\\\StripeObject\\|null\\.$#"
+			count: 1
+			path: src/Controller/PurchaseController.php
+
+		-
+			message: "#^Property App\\\\Database\\\\Connection\\:\\:\\$data type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Database/Connection.php
+
+		-
+			message: "#^Method App\\\\ValueObject\\\\Product\\:\\:__construct\\(\\) has parameter \\$product with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/ValueObject/Product.php

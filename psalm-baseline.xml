@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files psalm-version="5.8.0@9cf4f60a333f779ad3bc704a555920e81d4fdcda">
+  <file src="src/Controller/PurchaseController.php">
+    <MixedAssignment>
+      <code>$country</code>
+      <code>$email</code>
+      <code>$sku</code>
+    </MixedAssignment>
+    <MixedPropertyFetch>
+      <code><![CDATA[$event->data->object->customer_details]]></code>
+      <code><![CDATA[$event->data->object->customer_details->address]]></code>
+      <code><![CDATA[$event->data->object->customer_details->address->country]]></code>
+      <code><![CDATA[$event->data->object->customer_details->email]]></code>
+      <code><![CDATA[$event->data->object->metadata]]></code>
+      <code><![CDATA[$event->data->object->metadata->sku]]></code>
+      <code><![CDATA[$event->data->object->payment_intent]]></code>
+    </MixedPropertyFetch>
+    <PossiblyNullReference>
+      <code>offsetGet</code>
+    </PossiblyNullReference>
+    <UndefinedMagicPropertyFetch>
+      <code><![CDATA[$event->data->object]]></code>
+    </UndefinedMagicPropertyFetch>
+  </file>
+  <file src="src/Database/Connection.php">
+    <MixedArrayAccess>
+      <code><![CDATA[$product['description']]]></code>
+      <code><![CDATA[$product['description'][$locale]]]></code>
+      <code><![CDATA[$product['downloadLink']]]></code>
+      <code><![CDATA[$product['gallery']]]></code>
+      <code><![CDATA[$product['image']]]></code>
+      <code><![CDATA[$product['name']]]></code>
+      <code><![CDATA[$product['name'][$locale]]]></code>
+      <code><![CDATA[$product['price']]]></code>
+      <code><![CDATA[$product['shortDescription']]]></code>
+      <code><![CDATA[$product['shortDescription'][$locale]]]></code>
+      <code><![CDATA[$product['sku']]]></code>
+      <code><![CDATA[$product['slug']]]></code>
+      <code><![CDATA[$product['stripeLink']]]></code>
+      <code><![CDATA[$product['userGuideLink']]]></code>
+      <code><![CDATA[$product['userGuideLink'][$locale]]]></code>
+    </MixedArrayAccess>
+  </file>
+  <file src="src/ValueObject/Product.php">
+    <MixedAssignment>
+      <code><![CDATA[$this->description]]></code>
+      <code><![CDATA[$this->downloadLink]]></code>
+      <code><![CDATA[$this->gallery]]></code>
+      <code><![CDATA[$this->image]]></code>
+      <code><![CDATA[$this->name]]></code>
+      <code><![CDATA[$this->price]]></code>
+      <code><![CDATA[$this->shortDescription]]></code>
+      <code><![CDATA[$this->sku]]></code>
+      <code><![CDATA[$this->slug]]></code>
+      <code><![CDATA[$this->stripeLink]]></code>
+      <code><![CDATA[$this->userGuideLink]]></code>
+    </MixedAssignment>
+  </file>
+</files>

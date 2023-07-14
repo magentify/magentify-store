@@ -7,6 +7,7 @@ use App\EmailSender\PurchaseCompletedEmailSenderInterface;
 use App\Factory\StripeClientFactoryInterface;
 use App\ValueObject\ProductInterface;
 use Stripe\Exception\SignatureVerificationException;
+use Stripe\StripeClient;
 use Stripe\Webhook;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Exception\BadRequestException;
@@ -14,6 +15,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use UnexpectedValueException;
+use Webmozart\Assert\Assert;
 
 class PurchaseController extends AbstractController
 {
@@ -43,6 +45,7 @@ class PurchaseController extends AbstractController
         }
 
         $stripe = $this->stripeClientFactory->create();
+        Assert::isInstanceOf($stripe, StripeClient::class);
         $paymentIntentEventId = $paymentIntentEvent->id;
         $sku = null;
         $email = null;
@@ -74,6 +77,7 @@ class PurchaseController extends AbstractController
     public function checkoutComplete(Request $request): Response
     {
         $stripe = $this->stripeClientFactory->create();
+        Assert::isInstanceOf($stripe, StripeClient::class);
         $checkoutSessionId = $request->query->get('checkout-session-id');
         if (! is_string($checkoutSessionId)) {
             throw new BadRequestException();
