@@ -26,4 +26,6 @@ interface ProductInterface
     public function getUserGuideLink(): string;
 
     public function getDescription(): string;
+
+    public function getDownloadLink(): string;
 }

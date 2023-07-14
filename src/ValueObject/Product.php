@@ -27,6 +27,8 @@ readonly class Product implements ProductInterface
 
     private string $description;
 
+    private string $downloadLink;
+
     public function __construct(array $product)
     {
         $this->sku = $product['sku'];
@@ -39,6 +41,7 @@ readonly class Product implements ProductInterface
         $this->stripeLink = $product['stripeLink'];
         $this->userGuideLink = $product['userGuideLink'];
         $this->description = $product['description'];
+        $this->downloadLink = $product['downloadLink'];
     }
 
     public function getSku(): string
@@ -89,5 +92,10 @@ readonly class Product implements ProductInterface
     public function getDescription(): string
     {
         return $this->description;
+    }
+
+    public function getDownloadLink(): string
+    {
+        return $this->downloadLink;
     }
 }

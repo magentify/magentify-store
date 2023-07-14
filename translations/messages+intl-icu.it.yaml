@@ -72,4 +72,17 @@ app:
     compatibility_title: Compatibilità
     compatibility_content: Il modulo è stato testato con la versione Community di Magento 2.4.6
     guide: Guida all'installazione e all'utilizzo
-
+  thank_you:
+    title: Grazie per il tuo acquisto!
+    body: |
+      <h2>Ti abbiamo inviato una email all'indirizzo {email}</h2>
+      <p>Apri la mail e fai click su <strong>DOWNLOAD</strong> per scaricare il plugin che hai acquistato. Per qualsiasi dubbi scrivici a <a href="mailto:info@magentify.it"><strong>info@magentify.it</strong></a>.</p>
+  purchase_email:
+    subject: "Acquisto confermato: grazie per averci scelto!"
+    pre_subject: Ecco il link al download del Plugin Magento 2
+    incipit: Ciao,
+    first_p: Complimenti per il tuo acquisto! Per scaricare il Plugin per Magento 2 <strong>{product_name}</strong> clicca sul pulsate qua sotto.
+    cta: Download
+    second_p: Puoi leggere la guida all'installazione e all'uso a <a href="{product_userGuideLink}" target="_blank">questo link</a>. Se hai domande rispondi direttamente a questa mail.
+    end: Ciao!
+    footer: Magentify | Il sito con i migliori plugin per Magento 2

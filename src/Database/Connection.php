@@ -17,7 +17,7 @@ readonly class Connection implements ConnectionInterface
     public function __construct(string $databaseFullPath)
     {
         $content = file_get_contents($databaseFullPath);
-        if (!is_string($content)) {
+        if (! is_string($content)) {
             throw new DatabaseParsingException();
         }
         try {
@@ -25,7 +25,7 @@ readonly class Connection implements ConnectionInterface
         } catch (JsonException $e) {
             throw new DatabaseParsingException($e->getMessage());
         }
-        if (!is_array($data)) {
+        if (! is_array($data)) {
             throw new DatabaseParsingException();
         }
         $this->data = $data;
@@ -44,17 +44,37 @@ readonly class Connection implements ConnectionInterface
             'stripeLink' => $product['stripeLink'],
             'userGuideLink' => $product['userGuideLink'][$locale],
             'description' => $product['description'][$locale],
+            'downloadLink' => $product['downloadLink'],
         ]), $this->data);
     }
 
     public function getProductBySlug(string $slug, string $locale): ?ProductInterface
     {
+        return $this->getProductByField($slug, 'slug', $locale);
+    }
+
+    public function getProductBySku(string $sku, string $locale): ?ProductInterface
+    {
+        return $this->getProductByField($sku, 'sku', $locale);
+    }
+
+    private function getProductByField(string $value, string $field, string $locale): ?ProductInterface
+    {
         foreach ($this->getProducts($locale) as $product) {
-            if ($product->getSlug() === $slug) {
+            if ($this->getFieldValue($product, $field) === $value) {
                 return $product;
             }
         }
 
         return null;
+    }
+
+    private function getFieldValue(ProductInterface $product, string $field): ?string
+    {
+        return match ($field) {
+            'slug' => $product->getSlug(),
+            'sku' => $product->getSku(),
+            default => null,
+        };
     }
 }

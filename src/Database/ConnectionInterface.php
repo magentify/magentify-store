@@ -12,4 +12,6 @@ interface ConnectionInterface
     public function getProducts(string $locale): array;
 
     public function getProductBySlug(string $slug, string $locale): ?ProductInterface;
+
+    public function getProductBySku(string $sku, string $locale): ?ProductInterface;
 }

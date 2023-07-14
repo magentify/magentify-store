@@ -70,3 +70,18 @@ app:
     compatibility_title: Compatibility
     compatibility_content: The module has been tested with Magento 2.4.6 Community Edition
     guide: Installation and Usage Guide
+  thank_you:
+    title: Thank you for your purchase!
+    body: |
+      <h2>We have sent you an email to the address {email}</h2>
+      <p>Open the email and click on <strong>DOWNLOAD</strong> to download the plugin you have purchased. For any questions, please contact us at <a href="mailto:info@magentify.it"><strong>info@magentify.it</strong></a>.</p>
+  purchase_email:
+    subject: "Purchase Confirmed: Thank You for Choosing Us!"
+    pre_subject: Here's the link to download the Magento 2 Plugin
+    incipit: Hi,
+    first_p: Congratulations on your purchase! To download the Magento 2 Plugin <strong>{product_name}</strong>, click on the button below.
+    cta: Download
+    second_p: You can find installation and usage instructions at <a href="{product_userGuideLink}" target="_blank">this link</a>. If you have any questions, please reply to this email.
+    end: Bye!
+    footer: Magentify | The website with the best plugins for Magento 2
+

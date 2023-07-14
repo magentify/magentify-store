@@ -8,6 +8,8 @@ parameters:
     default-locale: 'en'
     app.supported_locales: 'en|it'
     app.database.full_path: '%kernel.project_dir%/var/data/products.json'
+    app.email_address.info: 'info@magentify.it'
+    app.email_address.support: 'support@magentify.it'
 
 services:
     # default configuration for services in *this* file
@@ -16,6 +18,9 @@ services:
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
         bind:
             $databaseFullPath: '%app.database.full_path%'
+            $stripeApiKey: '%env(resolve:STRIPE_API_KEY)%'
+            $infoEmailAddress: '%app.email_address.info%'
+            $stripeEndpointSecret: '%env(resolve:STRIPE_ENPOINT_SECRET)%'
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
