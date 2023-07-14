@@ -67,7 +67,7 @@ jobs:
             -   name: Install PHP dev dependencies
                 env:
                     APP_ENV: dev
-                run: composer install --verbose --no-interaction
+                run: composer install --verbose --prefer-dist --no-progress --no-interaction --optimize-autoloader --no-suggest
 
             -   name: Run Static test and Code validation
                 run: |
