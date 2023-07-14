@@ -127,7 +127,7 @@ jobs:
       - name: Compress the artifact
         run: |
           rm -rf .git .github node_modules tests assets
-          zip --symlinks -q -r build.zip . -x "deployer/*"
+          zip --symlinks -q -r deployer/build.zip . -x "deployer/*"
 
       - name: Create deployer-host.yml file
         run: echo '${{ secrets.DEPLOYER_HOST }}' >> deployer/host.yml
