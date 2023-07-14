@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <files psalm-version="5.8.0@9cf4f60a333f779ad3bc704a555920e81d4fdcda">
   <file src="src/Controller/PurchaseController.php">
+    <MixedArgument>
+      <code>$paymentIntentEventId</code>
+    </MixedArgument>
     <MixedAssignment>
       <code>$country</code>
       <code>$email</code>
+      <code>$paymentIntentEventId</code>
       <code>$sku</code>
     </MixedAssignment>
     <MixedPropertyFetch>
@@ -14,12 +18,14 @@
       <code><![CDATA[$event->data->object->metadata]]></code>
       <code><![CDATA[$event->data->object->metadata->sku]]></code>
       <code><![CDATA[$event->data->object->payment_intent]]></code>
+      <code><![CDATA[$paymentIntentEvent->data->object->id]]></code>
     </MixedPropertyFetch>
     <PossiblyNullReference>
       <code>offsetGet</code>
     </PossiblyNullReference>
     <UndefinedMagicPropertyFetch>
       <code><![CDATA[$event->data->object]]></code>
+      <code><![CDATA[$paymentIntentEvent->data->object]]></code>
     </UndefinedMagicPropertyFetch>
   </file>
   <file src="src/Database/Connection.php">

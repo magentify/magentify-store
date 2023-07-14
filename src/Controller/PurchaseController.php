@@ -46,7 +46,7 @@ class PurchaseController extends AbstractController
 
         $stripe = $this->stripeClientFactory->create();
         Assert::isInstanceOf($stripe, StripeClient::class);
-        $paymentIntentEventId = $paymentIntentEvent->id;
+        $paymentIntentEventId = $paymentIntentEvent->data->object->id;
         $sku = null;
         $email = null;
         foreach ($stripe->events->all([

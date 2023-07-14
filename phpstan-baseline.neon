@@ -2,7 +2,7 @@ parameters:
 	ignoreErrors:
 		-
 			message: "#^Access to an undefined property Stripe\\\\StripeObject\\:\\:\\$object\\.$#"
-			count: 4
+			count: 5
 			path: src/Controller/PurchaseController.php
 
 		-
