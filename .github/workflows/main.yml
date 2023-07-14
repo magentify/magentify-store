@@ -78,7 +78,7 @@ jobs:
                     vendor/bin/phpstan
                     vendor/bin/psalm
                     vendor/bin/rector
-                    bin/console lint:twig
+                    bin/console lint:twig templates
 
 #            -   name: Deploy
 #                uses: deployphp/action@v1
