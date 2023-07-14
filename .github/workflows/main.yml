@@ -28,6 +28,18 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-php-${{ env.PHP_VERSION }}-composer-
 
+      - name: Get Yarn cache directory
+        id: yarn-cache
+        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+
+      - name: Cache Yarn
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ env.NODE_VERSION }}-yarn-${{ hashFiles('**/package.json **/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ env.NODE_VERSION }}-yarn-
+
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
@@ -35,8 +47,16 @@ jobs:
           tools: composer:v2, composer-require-checker, symfony
           coverage: none
 
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "${{ env.NODE_VERSION }}"
+
       - name: Install PHP dependencies
         run: composer install -n --prefer-dist
+
+      - name: Install and Build Yarn dependencies
+        run: yarn install --no-progress --non-interactive && yarn build
 
       - name: Run Static test and Code validation
         run: |
