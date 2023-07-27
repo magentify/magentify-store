@@ -10,7 +10,7 @@
     <div class="products-gallery">
         <div class="container md:py-8 lg:py-12 xl:py-14">
             <div class="xt-row md:xt-row-8 lg:xt-row-12 items-stretch">
-                <div class="w-full md:w-5/12 lg:w-6/12 xl:w-7/12">
+                <div class="w-full md:w-5/12">
                     <div class="relative">
                         <div class="product-gallery overflow-y-auto overflow-x-hidden xt-overflow-sub h-96 xt-container-remove md:!m-0 md:!h-auto md:!overflow-hidden">
                             <div class="xt-list flex-col">
@@ -82,15 +82,16 @@
                     </div>
                 </div>
 
-                <div class="w-full md:w-7/12 lg:w-6/12 xl:w-5/12"
+                <div class="w-full md:w-7/12"
                      data-xt-stickyflow="{ element: '[data-xt-stickyflow-el]', filler: '[data-xt-stickyflow-filler]' }"
                 >
                     <div class="pointer-events-none absolute md:relative"
                          data-xt-stickyflow-filler>
                     </div>
                     <div class="py-12 md:sticky" data-xt-stickyflow-el>
-                        <h1 class="text-xl font-serif text-color-3 leading-tight">{{ 'app.magento_2'|trans }}</h1>
-                        <h2 class="text-5xl font-serif text-color-1 leading-tight my-4">{{ product.name }}</h2>
+                        <h2 class="text-xl font-serif text-color-3 leading-tight">{{ 'app.magento_2'|trans }}</h2>
+                        <h1 class="text-5xl font-serif text-color-1 leading-tight my-4">{{ product.name }}</h1>
+                        <span class="text-xl font-serif text-color-3 leading-tight">{{ 'app.product.version'|trans({'{version}': product.version}) }}</span>
 
                         <div class="xt-card my-6 bg-color-5 xt-links-default">
                             <div class="p-6 sm:p-8 text-sm">
@@ -112,7 +113,7 @@
                                     {% include 'Common/Icon/_chevronRight.html.twig' with {'class': 'xt-icon text-[9px] absolute right-0 group-on:rotate-90'} only %}
                                 </a>
                                 <div class="off:hidden out:pointer-events-none overflow-hidden transition-all" data-xt-toggle-target>
-                                    <div class="pt-2 pb-8 leading-relaxed">{{ 'app.product.update_content'|trans }}</div>
+                                    <div class="pt-2 pb-8 leading-relaxed">{{ 'app.product.update_content'|trans({'{support_page_link}': path('app_support_page')})|raw }}</div>
                                 </div>
                             </div>
                             <div>
@@ -123,7 +124,7 @@
                                 </a>
                                 <div class="off:hidden out:pointer-events-none overflow-hidden transition-all" data-xt-toggle-target>
                                     <div class="pt-2 pb-8 leading-relaxed">
-                                        {{ 'app.product.money_back_guarantee_content'|trans }}
+                                        {{ 'app.product.money_back_guarantee_content'|trans|raw }}
                                     </div>
                                 </div>
                             </div>
@@ -134,7 +135,7 @@
                                     {% include 'Common/Icon/_chevronRight.html.twig' with {'class': 'xt-icon text-[9px] absolute right-0 group-on:rotate-90'} only %}
                                 </a>
                                 <div class="off:hidden out:pointer-events-none overflow-hidden transition-all" data-xt-toggle-target>
-                                    <div class="pt-2 pb-8 leading-relaxed">{{ 'app.product.compatibility_content'|trans }}</div>
+                                    <div class="pt-2 pb-8 leading-relaxed">{{ 'app.product.compatibility_content'|trans|raw }}</div>
                                 </div>
                             </div>
                             <div>

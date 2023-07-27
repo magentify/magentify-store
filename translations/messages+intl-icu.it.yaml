@@ -10,6 +10,8 @@ app:
   support:
     title: Supporto
     body: |
+      <h2>Hai acquistato una nostra estensione meno di 6 mesi fa ed è uscita una nuova versione?</h2>
+      <p>Contattaci scrivendo un'email al nostro indirizzo di supporto tecnico <a href="mailto:support@magentify.it" target="_blank"><strong>support@magentify.it</strong></a>, ti invieremo subito il link al download alla nuova versione. Ricordati ti comunicarci l'identificativo della transazione.</p>
       <h2>Hai acquistato una nostra estensione e hai qualche problema o domanda di natura tecnica?</h2>
       <p>Non preoccuparti, puoi contattarci scrivendo una email al nostro indirizzo di supporto tecnico <a href="mailto:support@magentify.it" target="_blank"><strong>support@magentify.it</strong></a>. Non dimenticare di comunicarci:
         <ul>
@@ -65,12 +67,13 @@ app:
     type: Home
   product:
     buy: acquista
+    version: "Ultima versione: {version}"
     update_title: Aggiornamenti Garantiti
-    update_content: Avrai gli aggiornamenti garantiti per 6 mesi
+    update_content: Avrai gli aggiornamenti garantiti per 6 mesi, consulta la <a href="{support_page_link}"><strong>pagina di supporto</strong></a>.
     money_back_guarantee_title: Soddisfatti o rimborsati
-    money_back_guarantee_content: Avrai 10 giorni per provare il modulo e per riavere indietro i soldi se non ti soddisfa
+    money_back_guarantee_content: Avrai <strong>10 giorni</strong> per provare il modulo e per riavere indietro i soldi se non ti soddisfa.
     compatibility_title: Compatibilità
-    compatibility_content: Il modulo è stato testato con la versione Community di Magento 2.4.6
+    compatibility_content: Offriamo supporto sia per Magento Open Source che per Adobe Commerce. Supportiamo le stesse versioni supportate da Magento, ti invitiamo a consultare <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/planning/lifecycle-policy.html" target="_blank">la documentazione</a> per verificare la versione attualmente supportata.
     guide: Guida all'installazione e all'utilizzo
   thank_you:
     title: Grazie per il tuo acquisto!

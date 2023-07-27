@@ -8,6 +8,8 @@ app:
   support:
     title: Support
     body: |
+      <h2>Have you purchased one of our extensions less than 6 months ago and a new version came out?</h2>
+      <p>Contact us by writing an email to our technical support address <a href="mailto:support@magentify.it" target="_blank"><strong>support@magentify.it</strong></a>, we will immediately send you the download link to the new version. Remember to tell us the ID of the transaction.</p>
       <h2>Have you purchased one of our extensions and have any technical issues or questions?</h2>
       <p>Don't worry, you can contact us by writing an email to our technical support address <a href="mailto:support@magentify.it" target="_blank"><strong>support@magentify.it</strong></a>. Please remember to provide the following information:
         <ul>
@@ -63,12 +65,13 @@ app:
     type: Home
   product:
     buy: Buy
+    version: "Latest version: {version}"
     update_title: Guaranteed Updates
-    update_content: You will have guaranteed updates for 6 months
+    update_content: You will have guaranteed updates for 6 months, consult the <a href="{support_page_link}">support page</a>.
     money_back_guarantee_title: Money-Back Guarantee
-    money_back_guarantee_content: You will have 10 days to try the module and get a refund if you are not satisfied
+    money_back_guarantee_content: You will have <strong>10 days</strong> to try the module and get a refund if you are not satisfied.
     compatibility_title: Compatibility
-    compatibility_content: The module has been tested with Magento 2.4.6 Community Edition
+    compatibility_content: We provide support for both Magento Open Source and Adobe Commerce. We support the same versions as Magento Support does, please refer to <a href="https://experienceleague.adobe.com/docs/commerce-operations/release/planning/lifecycle-policy.html" target="_blank">the documentation</a> for the current supported version.
     guide: Installation and Usage Guide
   thank_you:
     title: Thank you for your purchase!
