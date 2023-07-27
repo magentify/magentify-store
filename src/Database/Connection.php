@@ -35,6 +35,7 @@ readonly class Connection implements ConnectionInterface
     {
         return array_map(static fn ($product) => new Product([
             'sku' => $product['sku'],
+            'version' => $product['version'],
             'name' => $product['name'][$locale],
             'slug' => $product['slug'],
             'shortDescription' => $product['shortDescription'][$locale],

@@ -6,6 +6,8 @@ readonly class Product implements ProductInterface
 {
     private string $sku;
 
+    private string $version;
+
     private string $name;
 
     private string $slug;
@@ -30,6 +32,7 @@ readonly class Product implements ProductInterface
     public function __construct(array $product)
     {
         $this->sku = $product['sku'];
+        $this->version = $product['version'];
         $this->name = $product['name'];
         $this->slug = $product['slug'];
         $this->shortDescription = $product['shortDescription'];
@@ -45,6 +48,11 @@ readonly class Product implements ProductInterface
     public function getSku(): string
     {
         return $this->sku;
+    }
+
+    public function getVersion(): string
+    {
+        return $this->version;
     }
 
     public function getName(): string

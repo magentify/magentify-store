@@ -6,6 +6,8 @@ interface ProductInterface
 {
     public function getSku(): string;
 
+    public function getVersion(): string;
+
     public function getName(): string;
 
     public function getSlug(): string;
