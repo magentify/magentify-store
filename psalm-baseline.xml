@@ -44,7 +44,7 @@
       <code><![CDATA[$product['slug']]]></code>
       <code><![CDATA[$product['stripeLink']]]></code>
       <code><![CDATA[$product['userGuideLink']]]></code>
-      <code><![CDATA[$product['userGuideLink'][$locale]]]></code>
+      <code><![CDATA[$product['version']]]></code>
     </MixedArrayAccess>
   </file>
   <file src="src/ValueObject/Product.php">
@@ -60,6 +60,7 @@
       <code><![CDATA[$this->slug]]></code>
       <code><![CDATA[$this->stripeLink]]></code>
       <code><![CDATA[$this->userGuideLink]]></code>
+      <code><![CDATA[$this->version]]></code>
     </MixedAssignment>
   </file>
 </files>
