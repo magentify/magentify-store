@@ -21,7 +21,7 @@
                                                  data-xt-overlay-element
                                             >
                                                 <img class="xt-media relative"
-                                                     src="{{ image }}"
+                                                     src="{{ asset(image) }}"
                                                      loading="lazy"
                                                      alt=""
                                                 />
@@ -89,7 +89,7 @@
                          data-xt-stickyflow-filler>
                     </div>
                     <div class="py-12 md:sticky" data-xt-stickyflow-el>
-                        <h2 class="text-xl font-serif text-color-3 leading-tight">{{ 'app.magento_2'|trans }}</h2>
+                        <span class="text-xl font-serif text-color-3 leading-tight">{{ 'app.magento_2'|trans }}</span>
                         <h1 class="text-5xl font-serif text-color-1 leading-tight my-4">{{ product.name }}</h1>
                         <span class="text-xl font-serif text-color-3 leading-tight">{{ 'app.product.version'|trans({'{version}': product.version}) }}</span>
 
