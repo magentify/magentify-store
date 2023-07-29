@@ -43,7 +43,7 @@ readonly class Connection implements ConnectionInterface
             'gallery' => $product['gallery'],
             'price' => $product['price'],
             'stripeLink' => $product['stripeLink'],
-            'userGuideLink' => $product['userGuideLink'][$locale],
+            'userGuideLink' => $product['userGuideLink'],
             'description' => $product['description'][$locale],
             'downloadLink' => $product['downloadLink'],
         ]), $this->data);
