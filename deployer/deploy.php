@@ -5,7 +5,7 @@ namespace Deployer;
 require 'recipe/symfony.php';
 
 // Configurations
-set('shared_files', ['.env.local', 'public/.htaccess', 'public/robots.txt']);
+set('shared_files', ['.env.local', 'public/.htaccess', 'public/robots.txt', 'public/sitemap.xml']);
 set('shared_dirs', ['public/.well-known', 'var/data', 'var/log']);
 
 desc('Upload the artifact to the production server');
