@@ -25,7 +25,7 @@
                     <ul class="list-reset py-4">
                         {% for locale in enabled_locales %}
                             <li>
-                                <a class="hover:text-color-4" href="{{ path('app_homepage', {'_locale': locale}) }}">{{ locale|language_name(locale) }}</a>
+                                <a class="hover:text-color-4" href="{{ path(app.current_route, app.current_route_parameters|merge({'_locale': locale})) }}">{{ locale|language_name(locale) }}</a>
                             </li>
                         {% endfor %}
                     </ul>
