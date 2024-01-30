@@ -2,6 +2,7 @@ twig:
     default_path: '%kernel.project_dir%/templates'
     globals:
         enabled_locales: "%enabled_locales%"
+        default_locale: "%default-locale%"
 
 when@test:
     twig:

@@ -1,0 +1,4 @@
+{% for locale in enabled_locales %}
+    <link rel="alternate" hreflang="{{ locale }}" href="{{ url(app.current_route, app.current_route_parameters|merge({'_locale': locale}))|raw }}" />
+{% endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ url(app.current_route, app.current_route_parameters|merge({'_locale': default_locale}))|raw }}" />
