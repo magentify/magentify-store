@@ -11,9 +11,9 @@ app:
     title: Supporto
     body: |
       <h2>Hai acquistato una nostra estensione meno di 6 mesi fa ed è uscita una nuova versione?</h2>
-      <p>Contattaci scrivendo un'email al nostro indirizzo di supporto tecnico <a href="mailto:support@magentify.it" target="_blank"><strong>support@magentify.it</strong></a>, ti invieremo subito il link al download alla nuova versione. Ricordati ti comunicarci l'identificativo della transazione.</p>
+      <p>Contattaci scrivendo un'email al nostro indirizzo di supporto tecnico <a href="mailto:info@store.magentify.it" target="_blank"><strong>info@store.magentify.it</strong></a>, ti invieremo subito il link al download alla nuova versione. Ricordati ti comunicarci l'identificativo della transazione.</p>
       <h2>Hai acquistato una nostra estensione e hai qualche problema o domanda di natura tecnica?</h2>
-      <p>Non preoccuparti, puoi contattarci scrivendo una email al nostro indirizzo di supporto tecnico <a href="mailto:support@magentify.it" target="_blank"><strong>support@magentify.it</strong></a>. Non dimenticare di comunicarci:
+      <p>Non preoccuparti, puoi contattarci scrivendo una email al nostro indirizzo di supporto tecnico <a href="mailto:info@store.magentify.it" target="_blank"><strong>info@store.magentify.it</strong></a>. Non dimenticare di comunicarci:
         <ul>
           <li>Il nome del modulo acquistato,</li>
           <li>L'identificativo della transazione,</li>
@@ -79,7 +79,7 @@ app:
     title: Grazie per il tuo acquisto!
     body: |
       <h2>Ti abbiamo inviato una email all'indirizzo {email}</h2>
-      <p>Apri la mail e fai click su <strong>DOWNLOAD</strong> per scaricare il plugin che hai acquistato. Per qualsiasi dubbi scrivici a <a href="mailto:info@magentify.it"><strong>info@magentify.it</strong></a>.</p>
+      <p>Apri la mail e fai click su <strong>DOWNLOAD</strong> per scaricare il plugin che hai acquistato. Per qualsiasi dubbi scrivici a <a href="mailto:info@store.magentify.it"><strong>info@store.magentify.it</strong></a>.</p>
   purchase_email:
     subject: "Acquisto confermato: grazie per averci scelto!"
     pre_subject: Ecco il link al download del Plugin Magento 2

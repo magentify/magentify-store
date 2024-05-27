@@ -9,9 +9,9 @@ app:
     title: Support
     body: |
       <h2>Have you purchased one of our extensions less than 6 months ago and a new version came out?</h2>
-      <p>Contact us by writing an email to our technical support address <a href="mailto:support@magentify.it" target="_blank"><strong>support@magentify.it</strong></a>, we will immediately send you the download link to the new version. Remember to tell us the ID of the transaction.</p>
+      <p>Contact us by writing an email to our technical support address <a href="mailto:info@store.magentify.it" target="_blank"><strong>info@store.magentify.it</strong></a>, we will immediately send you the download link to the new version. Remember to tell us the ID of the transaction.</p>
       <h2>Have you purchased one of our extensions and have any technical issues or questions?</h2>
-      <p>Don't worry, you can contact us by writing an email to our technical support address <a href="mailto:support@magentify.it" target="_blank"><strong>support@magentify.it</strong></a>. Please remember to provide the following information:
+      <p>Don't worry, you can contact us by writing an email to our technical support address <a href="mailto:info@store.magentify.it" target="_blank"><strong>info@store.magentify.it</strong></a>. Please remember to provide the following information:
         <ul>
           <li>The name of the purchased module,</li>
           <li>The transaction ID,</li>
@@ -77,7 +77,7 @@ app:
     title: Thank you for your purchase!
     body: |
       <h2>We have sent you an email to the address {email}</h2>
-      <p>Open the email and click on <strong>DOWNLOAD</strong> to download the plugin you have purchased. For any questions, please contact us at <a href="mailto:info@magentify.it"><strong>info@magentify.it</strong></a>.</p>
+      <p>Open the email and click on <strong>DOWNLOAD</strong> to download the plugin you have purchased. For any questions, please contact us at <a href="mailto:info@store.magentify.it"><strong>info@store.magentify.it</strong></a>.</p>
   purchase_email:
     subject: "Purchase Confirmed: Thank You for Choosing Us!"
     pre_subject: Here's the link to download the Magento 2 Plugin
