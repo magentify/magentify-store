@@ -8,8 +8,8 @@ parameters:
     default-locale: 'en'
     app.supported_locales: 'en|it'
     app.database.full_path: '%kernel.project_dir%/var/data/products.json'
-    app.email_address.info: 'info@magentify.it'
-    app.email_address.support: 'support@magentify.it'
+    app.email_address.info: 'info@store.magentify.it'
+    app.email_address.support: 'info@store.magentify.it'
 
 services:
     # default configuration for services in *this* file
